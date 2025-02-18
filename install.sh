@@ -26,7 +26,7 @@ then
 		git pull;
 	fi;
 
-	if [ ! -f ~/.local/bin/petfetch ]; then printf '#!/bin/bash\nbash ~/.local/opt/petfetch/petfetch.py $@' > ~/.local/bin/petfetch; fi;
+	if [ ! -f ~/.local/bin/petfetch ]; then printf '#!/bin/bash\nbash ~/.local/opt/petfetch/main.sh $@' > ~/.local/bin/petfetch; fi;
 
 	chmod +x ~/.local/bin/petfetch
 
