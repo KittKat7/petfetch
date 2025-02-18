@@ -30,10 +30,11 @@ system=$(uname);
 arch=$(uname -m);
 version=$(uname -r);
 cpu=$(lscpu | grep 'Model name' | cut -f 2 -d ":" | awk '{$1=$1}1');
-distro="$(lsb_release -si) $(lsb_release -rs)"
+distro="$(awk -F= '/^NAME=/ {gsub(/"/, "", $2); print $2}' /etc/os-release)"
+distrov="$(awk -F= '/^VERSION_ID=/ {gsub(/"/, "", $2); print $2}' /etc/os-release)"
 
 info[0]=$title
-info+=("$distro")
+info+=("$distro $distrov")
 info+=("$system $arch")
 info+=("$version")
 info+=("$cpu")
