@@ -26,10 +26,11 @@ system=$(uname);
 arch=$(uname -m);
 version=$(uname -r);
 cpu=$(lscpu | grep 'Model name' | cut -f 2 -d ":" | awk '{$1=$1}1');
+distro="$(lsb_release -si) $(lsb_release -rs)"
 
 info[0]=$title
-info+=("$system")
-info+=("$arch")
+info+=("$distro")
+info+=("$system $arch")
 info+=("$version")
 info+=("$cpu")
 
