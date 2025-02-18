@@ -12,7 +12,7 @@ while test $# -gt 0; do
 			bash $path/install.sh
 			exit 0
 			;;
-		--pet*)
+		-p|--pet*)
 			shift
 			pet=`echo $1 | sed -e 's/^[^=]*=//g'`
 			shift
