@@ -8,6 +8,10 @@ while test $# -gt 0; do
 			echo "help message"
 			exit 0
 			;;
+		-m|--modify)
+			bash $path/install.sh
+			exit 0
+			;;
 		--pet*)
 			shift
 			pet=`echo $1 | sed -e 's/^[^=]*=//g'`
