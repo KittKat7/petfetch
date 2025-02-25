@@ -67,6 +67,12 @@ then
 	colors=("${tra[@]}")
 fi
 
+if [[ "$pet" == "BLAHAJ" ]]
+then
+	pet="SHARK"
+	colors=("${tra[@]}")
+fi
+
 len=0;
 i=0;
 while IFS="" read -r line || [ -n "$line" ]; do
