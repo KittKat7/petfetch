@@ -26,18 +26,21 @@ const ALIASES: &[(&str, &str, &str)] = &[
     ("blahaj", "shark", "tra"),
     ("BLAHAJ", "SHARK", "tra"),
     ("rubberduck", "bird", "yel"),
-    ("RUBBERDUCK", "BIRD", "yel")
+    ("RUBBERDUCK", "BIRD", "yel"),
+    ("frogay", "frog", "gay")
+    //("RUBBERDUCK", "BIRD", "yel")
 ];
 
 const PETS: &[(&str, &[u8])] = &[
-    ("cat", include_bytes!("../../resources/cat.ascii")),
+    ("cat", include_bytes!("../resources/cat.ascii")),
 
-    ("bird", include_bytes!("../../resources/bird.ascii")),
-    ("dog", include_bytes!("../../resources/dog.ascii")),
-    ("mouse", include_bytes!("../../resources/mouse.ascii")),
-    ("shark", include_bytes!("../../resources/shark.ascii")),
+    ("bird", include_bytes!("../resources/bird.ascii")),
+    ("dog", include_bytes!("../resources/dog.ascii")),
+    ("frog", include_bytes!("../resources/frog.ascii")),
+    ("mouse", include_bytes!("../resources/mouse.ascii")),
+    ("shark", include_bytes!("../resources/shark.ascii")),
 
-    ("BIRD", include_bytes!("../../resources/BIRD.ascii")),
-    ("SHARK", include_bytes!("../../resources/SHARK.ascii"))
+    ("BIRD", include_bytes!("../resources/BIRD.ascii")),
+    ("SHARK", include_bytes!("../resources/SHARK.ascii"))
 ];
 
