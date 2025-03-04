@@ -1,0 +1,12 @@
+[package]
+name = "petfetch"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "petfetch"
+path = "src/main.rs"
+
+[dependencies]
+os_info = "3.10.0"
+sysinfo = "0.33.1"
